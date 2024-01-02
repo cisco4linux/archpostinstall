@@ -37,7 +37,7 @@ cd ../ && sudo rm -rfv yay/
 echo "-----------------------------------------"
 echo ">      Removing Gnome non used <"
 echo "-----------------------------------------"
-yes | sudo pacman -Runs gnome-maps gnome-connections gnome-tour epiphany gnome-contacts gnome-calendar gnome-scanner simple-scan characters 
+yes | sudo pacman -Runs gnome-maps gnome-connections gnome-tour epiphany gnome-contacts gnome-calendar gnome-scanner simple-scan 
 
 echo "-----------------------------------------"
 echo ">      Starting bluetooth service <"
