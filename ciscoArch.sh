@@ -73,7 +73,6 @@ EXT_LIST=(
 arch-update@RaphaelRochet
 ddterm@amezin.github.com
 dynamic-calendar-and-clocks-icons@fcusr.github.com
-fq@megh
 freon@UshakovVasilii_Github.yahoo.com
 fuzzy-clock@keepawayfromfire.co.uk
 Rounded_Corners@lennart-k
