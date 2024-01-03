@@ -14,7 +14,7 @@ yes | sudo pacman -Syu
 echo "------------------------------------------"
 echo ">     Installing programs via pacman <"
 echo "------------------------------------------"
-yes | sudo pacman -Sy git firefox steam neofetch discord nvidia-driver nvidia-lts vlc bitwarden rofi tldr gimp gnome-browser-connector pacman-contrib vte3 plank openssh rsync openrgb flatpak yuzu flycast
+yes | sudo pacman -Sy git firefox steam neofetch discord nvidia-driver nvidia-lts vlc bitwarden rofi tldr gimp gnome-browser-connector pacman-contrib vte3 plank openssh rsync openrgb flatpak yuzu
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "------------------------------------------"
