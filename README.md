@@ -1,7 +1,9 @@
 # archpostinstall
-Automated script to install my programs adn extensions.
+Automated script for after installing Arch.
 
 After installing Arch fresh just do:
+
+sudo pacman -S git
 
 git clone https://github.com/cisco4linux/archpostinstall.git
 
