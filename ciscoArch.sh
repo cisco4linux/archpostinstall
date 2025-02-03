@@ -14,7 +14,7 @@ yes | sudo pacman -Syu
 echo "------------------------------------------"
 echo ">     Installing programs via pacman <"
 echo "------------------------------------------"
-yes | sudo pacman -Sy git firefox steam neofetch discord nvidia-lts vlc bitwarden rofi tldr gimp gnome-browser-connector pacman-contrib vte3 plank openssh rsync openrgb flatpak yuzu
+yes | sudo pacman -Sy git firefox steam neofetch discord nvidia-lts vlc bitwarden gimp pacman-contrib vte3 openrgb flatpak yakuake
 flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 echo "------------------------------------------"
@@ -22,7 +22,6 @@ echo ">     Installing programs via flatpak <"
 echo "------------------------------------------"
 flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub org.onlyoffice.desktopeditors
-flatpak install -y flathub com.rtosta.zapzap
 
 echo "-----------------------------------------"
 echo ">      Installing yay <"
