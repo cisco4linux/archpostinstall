@@ -29,14 +29,13 @@ echo "-----------------------------------------"
 cd ~/Downloads
 git clone https://aur.archlinux.org/yay.git
 cd yay
-makepkg -s
-yes | sudo pacman -U yay*.pkg.tar.xz
-cd ../ && sudo rm -rfv yay/
+makepkg -si
+cd ../ && rm -rfv yay/
 
-echo "-----------------------------------------"
-echo ">      Removing Gnome non used <"
-echo "-----------------------------------------"
-yes | sudo pacman -Runs gnome-maps gnome-connections gnome-tour epiphany gnome-contacts gnome-calendar gnome-scanner simple-scan 
+#echo "-----------------------------------------"
+#echo ">      Removing Gnome non used <"
+#echo "-----------------------------------------"
+#yes | sudo pacman -Runs gnome-maps gnome-connections gnome-tour epiphany gnome-contacts gnome-calendar gnome-scanner simple-scan 
 
 echo "-----------------------------------------"
 echo ">      Starting bluetooth service <"
@@ -54,41 +53,41 @@ cd synth-shell
 ./setup.sh
 cd ../ && sudo rm -rfv synth-shell/
 
-echo "-----------------------------------------"
-echo ">      Enabling SSH Service <"
-echo "-----------------------------------------"
-sudo systemctl enable sshd
-sudo systemctl start sshd
+#echo "-----------------------------------------"
+#echo ">      Enabling SSH Service <"
+#echo "-----------------------------------------"
+#sudo systemctl enable sshd
+#sudo systemctl start sshd
 
 echo "-----------------------------------------"
 echo ">      YAY! Careful <"
 echo "-----------------------------------------"
 yay -S pamac-aur
 
-echo "-----------------------------------------"
-echo ">      Installing GNOME Extensions <"
-echo "-----------------------------------------"
-EXT_LIST=(
-arch-update@RaphaelRochet
-ddterm@amezin.github.com
-dynamic-calendar-and-clocks-icons@fcusr.github.com
-freon@UshakovVasilii_Github.yahoo.com
-fuzzy-clock@keepawayfromfire.co.uk
-Rounded_Corners@lennart-k
-status-area-horizontal-spacing@mathematical.coffee.gmail.com
-tophat@fflewddur.github.io
-trayIconsReloaded@selfmade.pl
-upower-battery@codilia.com
-weatheroclock@CleoMenezesJr.github.io
-AddCustomTextToWorkSpaceIndicators@pratap.fastmail.fm
-)
+#echo "-----------------------------------------"
+#echo ">      Installing GNOME Extensions <"
+#echo "-----------------------------------------"
+#EXT_LIST=(
+#arch-update@RaphaelRochet
+#ddterm@amezin.github.com
+#dynamic-calendar-and-clocks-icons@fcusr.github.com
+#freon@UshakovVasilii_Github.yahoo.com
+#fuzzy-clock@keepawayfromfire.co.uk
+#Rounded_Corners@lennart-k
+#status-area-horizontal-spacing@mathematical.coffee.gmail.com
+#tophat@fflewddur.github.io
+#trayIconsReloaded@selfmade.pl
+#upower-battery@codilia.com
+#weatheroclock@CleoMenezesJr.github.io
+#AddCustomTextToWorkSpaceIndicators@pratap.fastmail.fm
+#)
 
-GN_CMD_OUTPUT=$(gnome-shell --version)
-GN_SHELL=${GN_CMD_OUTPUT:12:2}
-for i in "${EXT_LIST[@]}"
-do
-    busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s ${i}
-done
+#GN_CMD_OUTPUT=$(gnome-shell --version)
+#GN_SHELL=${GN_CMD_OUTPUT:12:2}
+#for i in "${EXT_LIST[@]}"
+#do
+#    busctl --user call org.gnome.Shell.Extensions /org/gnome/Shell/Extensions org.gnome.Shell.Extensions InstallRemoteExtension s ${i}
+#done
 
 echo "-----------------------------------------"
 echo ">      DONE <"
