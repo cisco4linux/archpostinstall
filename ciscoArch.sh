@@ -20,7 +20,6 @@ flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flath
 echo "------------------------------------------"
 echo ">     Installing programs via flatpak <"
 echo "------------------------------------------"
-flatpak install -y flathub com.discordapp.Discord
 flatpak install -y flathub org.onlyoffice.desktopeditors
 
 echo "-----------------------------------------"
